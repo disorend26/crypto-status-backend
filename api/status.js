@@ -4,7 +4,7 @@ export default async function handler(req, res) {
 
   try {
     const [binance, okx] = await Promise.allSettled([
-      fetch('https://api.binance.com/api/v3/ticker/24hr').then(r => r.json()),
+      fetch('https://api.binance.us/api/v3/ticker/24hr').then(r => r.json()),
       fetch('https://www.okx.com/api/v5/market/tickers?instType=SPOT').then(r => r.json())
     ]);
 
